@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/crypto33.js"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="h35px">
+            <img src="http://www.free-icons-download.net/images/green-padlock-icon-47073.png" class="w35px h35px">
+            <a href="#" class="txtbld ablock prb12px">Crypto33</a>
+        </div>
+    </div>
+    <div class="center top-relative">
+        <div class="content voilet0">
+            <span>Crypto33 supports only lowercase alphabets!</span>
+        </div>
+        <div class="content voilet1">
+            <span>Enter Passcode for Encryption</span>
+            <input class="f15pt" type="password" id="passcode" placeholder="passcode" />
+        </div>
+        <div class="content voilet2">
+            <span>Text to Convert</span>
+            <textarea id="originalContent"></textarea>
+        </div>
+        <div class="content voilet0">
+            <span>Encrypted Content</span>
+            <textarea id="encryptedContent" readonly></textarea>
+        </div>
+        <div class="content voilet0">
+            <span>Decrypted Content</span>
+            <textarea id="decryptedContent" readonly></textarea>
+        </div>
+        <button class="encrypt" onclick="Crypto33.setEncrypt('originalContent','encryptedContent','passcode')">Encrypt</button>
+        <button class="encrypt" onclick="Crypto33.setDecrypt('originalContent','decryptedContent','passcode')">Decrypt</button>
+    </div>
+</body>
+
+</html>
