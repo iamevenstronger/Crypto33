@@ -9,7 +9,7 @@ var Crypto33 = {
         var result = []; var passLen = passcode.length ;
         for(var i = 0  ; i < content.length ; i++) {
             var passOffset = i%passLen ;
-            var calAscii = (content.charCodeAt(i)%passcode.charCodeAt(passOffset))+33;
+            var calAscii = (content.charCodeAt(i)+passcode.charCodeAt(passOffset));
             result.push(calAscii);
         }
         return JSON.stringify(result) ;
@@ -19,12 +19,11 @@ var Crypto33 = {
         var codesArr = JSON.parse(content);var passLen = passcode.length ;
         for(var i = 0  ; i < codesArr.length ; i++) {
             var passOffset = i%passLen ;
-            var calAscii = (codesArr[i]%passcode.charCodeAt(passOffset))-33+passcode.charCodeAt(passOffset);
+            var calAscii = (codesArr[i]-passcode.charCodeAt(passOffset));
             result.push(calAscii) ;
         }
-        console.log(result);
         for(var i = 0 ; i < result.length ; i++) {
-            var ch = String.fromCharCode(result[i]); str += ((ch.length == 0)?' ':ch) ;
+            var ch = String.fromCharCode(result[i]); str += ch ;
         }
         return str ;
     }
