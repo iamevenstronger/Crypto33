@@ -1,3 +1,3 @@
 # Crypto33 
-## It only supports lowercase alphabets!
+## It supports almost every unicode characters!
 ### Demo: [Crypto33](https://iamevenstronger.github.io/Crypto33/index.html)
